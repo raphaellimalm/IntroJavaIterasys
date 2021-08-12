@@ -2,7 +2,6 @@
 package petstore;
 
 // 2 - Bibliotecas
-
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ import static io.restassured.RestAssured.given;
 
 // 3 - Classe
 public class Pet {
-    // 3.1 - Atributos
+    // 3.1 - , valores e caracteristicas
     String uri = "https://petstore.swagger.io/v2/pet"; // endereço da entidade Pet
 
     // 3.2 - Métodos e Funções
@@ -35,9 +34,9 @@ public class Pet {
                 .contentType("application/json") // comum em API REST - antigas era "text/xml"
                 .log().all()
                 .body(jsonBody)
-                .when()  // Quando
+        .when()  // Quando
                 .post(uri)
-                .then()  // Então
+        .then()  // Então
                 .log().all()
                 .statusCode(200)
         ;
